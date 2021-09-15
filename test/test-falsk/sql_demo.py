@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time:2021/9/5 15:12
-# @Author:ytq
+# @Author:dongxiaochun
 # @File:sql_demo.py
 
 # 导入flask和flask_sqlalchemy
