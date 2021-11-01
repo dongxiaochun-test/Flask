@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+人 -> 日历: 创建
+人 -> 日程: 创建
+日历 -> 日程: 创建
+日程 -> 时间: 添加
+日程 -> 地点: 添加
+
+
+@enduml
