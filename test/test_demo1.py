@@ -1,14 +1,9 @@
+def power(x, n):
+    s = 1
+    while n > 0:
+        n = n - 1
+        s = s * x
+        return s
 
-class TestClass:
-    def test_one(self):
-        x="123"
-        assert "1" in x
 
-    def test_two(self):
-        x = "hello"
-        assert hasattr(x, 'check')
-
-    def test_three(self):
-        a = "hello"
-        b = "hello world"
-        assert a in b
+print(power(2, 4))
