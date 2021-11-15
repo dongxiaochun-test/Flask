@@ -4,6 +4,9 @@ from pydantic import BaseModel
 
 
 class RequestMethod(Text, Enum):
+    """
+    封装常见的请求方法
+    """
     GET = 'GET'
     POST = 'POST'
     DELETE = 'DELETE'
@@ -14,6 +17,10 @@ class RequestMethod(Text, Enum):
 
 
 class TRequest(BaseModel):
+    """
+    封装请求数据
+    """
+
     method: RequestMethod
     url: Text
     params: Dict[Text, Text] = {}
@@ -28,7 +35,14 @@ class TRequest(BaseModel):
 
 
 class TStep(BaseModel):
+    """
+    封装测试步骤信息
+    """
+    # 测试步骤名称
     name: Text
+    # 请求对象（存储需要请求的参数信息）
     request: Union[TRequest, None] = None
+    # 存储需要导出的返回数据信息
     extract: Dict[Text, Any] = {}
-    validators: List[Dict]
+    # 存储当前步骤的断言信息
+    validators: List[Dict] = None
