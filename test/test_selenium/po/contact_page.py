@@ -27,7 +27,7 @@ class ContactPage(BasePage):
         # self.driver = webdriver.Chrome(options=opt)
         # self.driver.implicitly_wait(10)
         # ele = (By.CSS_SELECTOR, ".ww_operationBar .js_add_member")
-        # WebDriverWait(self.driver, 10).until(expected_conditions.element_to_be_clickable(ele))
+        # WebDriverWait(self.driver, 10).common(expected_conditions.element_to_be_clickable(ele))
         self.wait_for_click(self._ADDMEMBER)
         # self.driver.find_element_by_css_selector(".ww_operationBar .js_add_member").click()
         return AddMemberPage(self.driver)

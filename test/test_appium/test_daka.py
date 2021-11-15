@@ -57,4 +57,4 @@ class TestWeXin:
         self.driver.find_element(MobileBy.XPATH, "//*[@text='外出打卡']").click()
         self.driver.find_element(MobileBy.XPATH, "//*[contains(@text, '次外出')]").click()
         self.driver.find_element(MobileBy.XPATH, "//*[@text='外出打卡成功']")
-        # WebDriverWait(self.driver,10).until(lambda x:x.find_element(MobileBy.XPATH, "//*[@text='外出打卡成功']"))
+        # WebDriverWait(self.driver,10).common(lambda x:x.find_element(MobileBy.XPATH, "//*[@text='外出打卡成功']"))
