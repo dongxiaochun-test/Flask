@@ -48,9 +48,13 @@ class RequestWithOptionalArgs:
         return self
 
     def perform(self) -> TStep:
+        '''
+        填充完数据后，需要然后一个TStep对象
+        '''
         return self.__step_context
 
 
+# 创建RunRequest对象时，在RunRequest类初始化函数中创建一个TStep对象，通过调用get等方法创建一个TRequest对象
 class RunRequest:
     def __init__(self, name: Text):
         # 创建一个TStep对象
@@ -83,4 +87,3 @@ class RunRequest:
     def patch(self, url: Text) -> RequestWithOptionalArgs:
         self.__step_context.request = TRequest(method=RequestMethod.PATCH, url=url)
         return RequestWithOptionalArgs(self.__step_context)
-
